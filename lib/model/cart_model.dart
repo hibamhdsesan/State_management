@@ -44,13 +44,20 @@ class CartModel extends ResultData {
     };
   }
 
-  factory CartModel.fromMap(List<dynamic> map) {
-    return CartModel(
-      prodcuts: List.generate(map.length, (index) => ProductModel.fromMap(map[index]),),
-      id: 1,
-      totalPrice: 0,
-    );
-  }
+  // factory CartModel.fromMap(List<dynamic> map) {
+  //   return CartModel(
+  //     prodcuts: List.generate(map.length, (index) => ProductModel.fromMap(map[index]),),
+  //     id: 1,
+  //     totalPrice: 0,
+  //   );
+  // }
+factory CartModel.fromMap(List<dynamic> map) {
+  return CartModel(
+    prodcuts: List.generate(map.length, (index) => ProductModel.fromMap(map[index]),),
+    id: 1,
+    totalPrice: 0,
+  );
+}
 
 //   factory CartModel.fromMap(Map<String, dynamic> map) {
 //   return CartModel(
